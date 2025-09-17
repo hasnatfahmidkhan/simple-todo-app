@@ -9,7 +9,7 @@ addTask.addEventListener("click", () => {
 
   if (inpValue !== "") {
     tasks.push({
-      id: crypto.randomUUID(),
+      id: tasks.length + 1,
       task: inpValue,
     });
     localStorage.setItem("tasks", JSON.stringify(tasks));
@@ -31,7 +31,7 @@ const showTask = () => {
 };
 
 function DeleteTask(id) {
-  const filteredTasks = tasks.filter((task) => id !== task.id);
+  const filteredTasks = tasks.filter((task) => Number(id) !== task.id);
   tasks = filteredTasks;
   localStorage.setItem("tasks", JSON.stringify(tasks));
   showTask();
