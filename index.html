@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <section class="w-10/12 mx-auto text-center font-mono">
+      <header class="pt-10 pb-6">
+        <h1
+          class="text-4xl font-semibold border-b-2 border-emerald-700 inline-block text-emerald-700"
+        >
+          Todo List
+        </h1>
+      </header>
+      <main class="space-y-4 md:space-y-0">
+        <input
+          id="inputTask"
+          type="text"
+          placeholder="Type Your Task"
+          class="input focus:outline-none"
+        />
+        <button id="addTask" class="btn btn-success">Add Task</button>
+
+        <section class="bg-gray-300 py-10 md:py-20 w-full md:w-2/3 mx-auto my-7 rounded-xl">
+          <ol
+            id="taskContainer"
+            class="space-y-6 w-2/3 text-left text-wrap list-decimal mx-auto"
+          ></ol>
+        </section>
+      </main>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
